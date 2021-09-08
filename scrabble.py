@@ -9,3 +9,11 @@ points = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 4, 1, 3, 10, 1, 1, 1, 1, 4, 4, 
 # create a dictionary called letter_to_points 
 # that has the elements of letters as the keys 
 # and the elements of points as the values.
+
+letter_to_points = {
+    key: value
+    for key, value
+    in zip(letters, points)
+}
+
+print(letter_to_points)
