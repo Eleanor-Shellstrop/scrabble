@@ -45,20 +45,21 @@ player_to_words = {
 
 player_to_points = {}
 
-# ADD ALL PLAYER POINTS
-for player, words in player_to_words.items():
-    player_points = 0
-    for word in words:
-        player_points += score_word(word)
-    player_to_points[player] = player_points
-
 
 # ADD NEW WORD TO PLAYER'S WORD LIST
 def play_word(player, word):
     player_to_words[player].append(word)
 
 
-play_word("player1", "CODE")
+# UPDATE POINT TOTALS
+def update_point_totals():
+    for player, words in player_to_words.items():
+        player_points = 0
+        for word in words:
+            player_points += score_word(word)
+        player_to_points[player] = player_points
+
+update_point_totals()
 
 
-print(player_to_words)
+print(player_to_points) 
