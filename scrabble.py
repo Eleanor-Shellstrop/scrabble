@@ -8,10 +8,15 @@ letter_to_points = {
     in zip(letters, points)
 }
 
-# Our letters list did not take into account blank tiles. 
-# Add an element to the letter_to_points dictionary 
-# that has a key of " " and a point value of 0.
-
 letter_to_points[" "] = 0
 
-print(letter_to_points)
+# We want to create a function that will 
+# take in a word and return how many points 
+# that word is worth. 
+# Define a function called score_word that 
+# takes in a parameter word. 
+# Inside score_word, create a variable 
+# called point_total and set it to 0.
+
+def score_word(word):
+    point_total = 0
