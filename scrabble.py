@@ -18,15 +18,38 @@ def score_word(word):
     return point_total   
 
 
-# Create a dictionary called player_to_words 
-# that maps players to a list of the words they have played.
-# Create an empty dictionary called player_to_points.
-
 player_to_words = {
     "player1": ["BLUE", "TENNIS", "EXIT"],
     "wordNerd": ["EARTH", "EYES", "MACHINE"],
     "Lexi Con": ["ERASER", "BELLY", "HUSKY"],
-    "PROF READER": ["ZAP", "COMA", "PERIOD"]
+    "Prof Reader": ["ZAP", "COMA", "PERIOD"]
 }
 
+
 player_to_points = {}
+
+
+#  Iterate through the items in player_to_words. 
+# Call each player player and each list of words words.
+# Within your loop, create a variable called 
+# player_points and set it to 0.
+
+# Within the loop, create another loop 
+# that goes through each word in words 
+# and adds the value of score_word() 
+# with word as an input.
+
+# After the inner loop ends, 
+# set the current player value 
+# to be a key of player_to_points, 
+# with a value of player_points
+
+
+for player, words in player_to_words.items():
+    player_points = 0
+    for word in words:
+        player_points += score_word(word)
+    player_to_points[player] = player_points
+
+
+print(player_to_points)
