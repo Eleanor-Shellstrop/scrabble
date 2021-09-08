@@ -10,13 +10,23 @@ letter_to_points = {
 
 letter_to_points[" "] = 0
 
-# We want to create a function that will 
-# take in a word and return how many points 
-# that word is worth. 
-# Define a function called score_word that 
-# takes in a parameter word. 
-# Inside score_word, create a variable 
-# called point_total and set it to 0.
+
+
+# After defining point_total, create a for loop 
+# that goes through the letters in word 
+# and adds the point value of each letter 
+# to point_total. 
+# You should get the point value from 
+# the letter_to_points dictionary. 
+# If the letter you are checking for is 
+# not in letter_to_points, 
+# add 0 to the point_total.
+# After the for loop is finished, return point_total.
+ 
 
 def score_word(word):
     point_total = 0
+    for letter in word:
+        point_total += letter_to_points.get(letter, 0)
+    return point_total   
+
