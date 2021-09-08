@@ -11,22 +11,17 @@ letter_to_points = {
 letter_to_points[" "] = 0
 
 
-
-# After defining point_total, create a for loop 
-# that goes through the letters in word 
-# and adds the point value of each letter 
-# to point_total. 
-# You should get the point value from 
-# the letter_to_points dictionary. 
-# If the letter you are checking for is 
-# not in letter_to_points, 
-# add 0 to the point_total.
-# After the for loop is finished, return point_total.
- 
-
 def score_word(word):
     point_total = 0
     for letter in word:
         point_total += letter_to_points.get(letter, 0)
     return point_total   
 
+# Let’s test this function! 
+# Create a variable called brownie_points 
+# and set it equal to the value 
+# returned by the score_word() function 
+# with an input of "BROWNIE"
+
+brownie_points = score_word("BROWNIE")
+print(brownie_points)   #Prints 15
