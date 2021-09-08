@@ -17,11 +17,16 @@ def score_word(word):
         point_total += letter_to_points.get(letter, 0)
     return point_total   
 
-# Let’s test this function! 
-# Create a variable called brownie_points 
-# and set it equal to the value 
-# returned by the score_word() function 
-# with an input of "BROWNIE"
 
-brownie_points = score_word("BROWNIE")
-print(brownie_points)   #Prints 15
+# Create a dictionary called player_to_words 
+# that maps players to a list of the words they have played.
+# Create an empty dictionary called player_to_points.
+
+player_to_words = {
+    "player1": ["BLUE", "TENNIS", "EXIT"],
+    "wordNerd": ["EARTH", "EYES", "MACHINE"],
+    "Lexi Con": ["ERASER", "BELLY", "HUSKY"],
+    "PROF READER": ["ZAP", "COMA", "PERIOD"]
+}
+
+player_to_points = {}
