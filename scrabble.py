@@ -18,6 +18,17 @@ points = [
     ]
 
 
+# Allow for lowercase letter input
+letters += [
+    letter.lower()
+    for letter in letters
+]
+
+
+# Point list copied for lowercase list to use
+points *= 2
+
+
 letter_to_points = {
     key: value
     for key, value
@@ -59,7 +70,5 @@ def update_point_totals():
             player_points += score_word(word)
         player_to_points[player] = player_points
 
+
 update_point_totals()
-
-
-print(player_to_points) 
